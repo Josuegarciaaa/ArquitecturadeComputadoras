@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../../css2?family=Abel&family=Inter:wght@500&family=Nerko+One&display=swap" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css" media="screen">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../9672049fd0.js" crossorigin="anonymous"></script>
+    <script src="C:\Users\josue\Desktop\ProyectoArqui\java.js"></script>
+    <title>Unidad 2 </title>
+</head>
+<button onclick="aumentarFuente()">Aumentar fuente</button>
+<button onclick="disminuirFuente()">Disminuir fuente</button>
+
+<body>
+    
+    <header> 
+        <p> <font class="tituloUnidad">ARQUITECTURA DE COMPUTADORAS</font> <i class="fa-solid fa-computer"></i> </p> 
+    </header>
+
+    <header class="unidades">
+        <p> <font class="subtitulo"> <a href="../index.html">Unidad 1</a> &nbsp; &nbsp; <a href="unidad2.html">Unidad 2</a>  &nbsp; &nbsp; <a href="unidad3.html">Unidad 3</a>  &nbsp; &nbsp; <a href="unidad4.html">Unidad 4 </a>  &nbsp; &nbsp; <a href="practicas.html"> Prácticas </a></font> </p>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <a href="#2.1"><li>2.1 Organización del Procesador </li></a>
+                <a href="#2.2"><li>2.2 Estructuras de Registros</li></a>
+                <ul>
+                    <a href="#2.2.1"><li class="indt">2.2.1 Registros Visibles Para el Usuario</li></a>
+                    <a href="#2.2.2"><li class="indt">2.2.2 Registros de Control y de Estados</li></a>
+                </ul>
+                <a href="#2.3"><li>2.3 El Ciclón de Instrucciones</li></a>
+                <ul>
+                    <a href="#2.3.1"><li class="indt">2.3.1 Ciclo Fetch-Decode-Execute</li></a>
+                    <a href="#2.3.2"><li class="indt">2.3.2 Segmentación de Instrucciones</li></a>
+                    <a href="#2.3.3"><li class="indt">2.3.3 Conjunto de Instrucciones</li></a>
+                </ul>
+                <a href="#2.4"><li> 2.4 Modos de Direccionamiento </li></a>
+                </ul>
+            
+        </nav>
+
+        <article>
+            <font class="title"> <center> Unidad 2  </center></font>
+            <p> <br> </p>
+
+            <h2 id="2.1">2.1 Organización del Procesador</h2> <hr>
+            <p class="text">La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de procesamiento de datos. Frecuentemente se le llama procesador.</p><p><br></p>
+            <p class="text">Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. <br> Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa.</p><p><br></p>
+            <p class="text"><b>Lleva a cabo una gran variedad de <ul class="indt"><li>Cálculos</li><li>Comparaciones numéricas</li><li>Transferencias de datos como respuesta a las peticiones de los programas que están siendo ejecutados en memoria.</li></ul> </b></p><p><br></p>
+            <p align="center"><img src="https://4.bp.blogspot.com/-ZrLK6wBMang/VU2ZU4x5a9I/AAAAAAAAACM/oXAhpo2Cg5Q/s1600/8.png"><br></p> 
+
+            <h2 id="2.2">2.2 Estructuras de Registros</h2> <hr>
+            <h4> <i> Registros del CPU </i> </h4>
+            <p class="text">Se emplean para controlar las instrucciones en ejecución, manejar direccionamiento de memoria y propiciar la capacidad aritmética.</p><p><br></p>
+            <p class="text">Los registros vienen de tres tipos: datos, direcciones e índice, que tiene lugar en casi todos los aspectos de la operación del CPU. </p><p><br></p>
+            <p class="text">El tamaño de un registro depende del CPU; los más simples tienen registros que aceptan 8 o 16 bits de datos y los más complejos tienen registros de 32, 48 o 64 bits.</p><p><br></p>
+            <h1 id="2.2.1">2.2.1 Registros Visibles Para el Usuario</h1>
+            <p class="text">Un registro visible al usuario es aquél que puede ser referenciado por medio del lenguaje máquina que ejecuta la CPU. Prácticamente todos los diseños contemporáneos de CPUs están provistos de varios registros visibles al usuario, en oposición a disponer de un único acumulador.</p><p><br></p>
+            <p class="text"><b>Podemos clasificarlos en:</b><ul class="indt"><li>Uso General</li><li>Datos</li><li>Direcciones</li><li>Códigos de Condición</li></ul> <p><br></p>
+            <p class="text">Los registros de uso general pueden ser asignados por el programador a diversas funciones. A veces, su uso dentro del repertorio de instrucciones es para contener el operando para cualquier código de operación. <br> Esto proporciona una utilización de registros de auténtico uso general. Con frecuencia, sin embargo, existen restricciones. Por ejemplo, puede haber registros específicos para operaciones en coma flotante. </p><p><br></p>
+            <p class="text">En algunos casos los registros de uso general pueden ser utilizados para funciones de direccionamiento. En otros casos hay una separación clara o parcial entre registros de datos y registros de direcciones. <br> Los registros de datos pueden ser usados únicamente para contener datos y no se pueden emplear en el cálculo de una dirección de operando. </p><p><br></p>
+            <p class="text">Los registros de dirección pueden ser en sí registros de uso más o menos general, o pueden estar dedicados a un modo de direccionamiento particular. El caso más conocido es el puntero a pila. La cantidad de registros generales o especializados es una cuestión de diseño. No hay solución óptima, pero la tendencia parece ir hacia el uso de registros especializados. <br> Otro problema de diseño es el numero de registros, de uso general o de datos más direcciones, que tienen que incluirse.</p><p><br></p>
+            <p class="text">A mayor cantidad de registros se requieren mayor cantidad de bits en el campo de operando. Parece óptimo entre 8 y 32 registros. Menos registros se traducen en más referencias a memoria; más registros no reducen notablemente las referencias a memoria. Por último, está la cuestión de la longitud de los registros. </p><p><br></p>
+            <p class="text">Los registros que han de contener direcciones han de ser lo suficientemente grandes como para albergar la dirección más grande. Los registros de datos deben ser capaces de contener valores de la mayoría de tipos de datos. <br> Algunas máquinas permiten que los registros contiguos sean usados como uno para contener valores de doble longitud. </p><p><br></p>
+            <p class="text">Una categoría final de registros, que es al menos parcialmente visible al usuario, contiene códigos de condición (también llamados indicadores o flags). <br> Los códigos de condición son bits fijados por el hardware de la CPU como resultado de alguna operación. Por ejemplo, una operación aritmética puede producir un resultado positivo, negativo o nulo, o con desbordamiento. Además de almacenarse el propio resultado en un registro o en la memoria, se obtiene también un código de condición. </p><p><br></p>
+            <p class="text">Los bits de códigos de condición se reúnen en uno o más registros. Por lo general, forman parte de un registro de control. <br> Comúnmente, las instrucciones de máquina permiten que estos bits sean leídos por referencia implícita, pero no pueden ser alterados por el programador. </p><p><br></p>
+            
+            <h1 id="2.2.2">2.2.2 Registros de Control y de Estados</h1>
+            <h4> <i> Registros de control </i> </h4>
+            <p class="text">Hay diversos registros de la CPU que se pueden emplear para controlar su funcionamiento. La mayoría de éstos, en la mayor parte de las máquinas, no son visibles al usuario. Algunos de ellos pueden ser visibles a instrucciones de máquina ejecutadas en un modo de control o de sistema operativo. </p><p><br></p>
+            <p class="text">Naturalmente, máquinas diferentes tendrán diferentes organizaciones de registros y usará distinta terminología. Se enumera aquí una lista razonablemente completa de tipos de registros, con una breve descripción. Son esenciales cuatro registros para la ejecución de una instrucción: el contador de programa, el registro de dirección, el registro de instrucción y el registro de datos. </p><p><br></p>
+            <p class="text">El contador de programa contiene una dirección de instrucción. Típicamente, la CPU actualiza el PC después de cada captación de instrucción de manera que siempre apunta a la siguiente instrucción a ejecutar. Una instrucción de bifurcación o salto también modificará el contenido de PC. La instrucción captada se carga en el registro de instrucción, donde son analizados el código de operación y los campos de operando. <br> Se intercambian datos con la memoria por medio de registro de direcciones y el de datos. En un sistema con organización de bus, el de direcciones se conecta directamente al bus de direcciones, y el de datos directamente al bus de datos. </p><p><br></p>
+            <p class="text">Los registros visibles al usuario, sucesivamente, intercambian datos con el de datos. Los cuatro registros que acaban de mencionar se usan para la transferencia de datos entre la CPU y la memoria. Dentro de la CPU, los datos tienen que ofrecerse a la ALU para su procesamiento. La ALU puede tener acceso directo al de datos y a los registros visibles al usuario. Como alternativa, puede haber registros intermedios adicionales en el límite de la ALU; estos registros sirven como registros de entrada y salida de la ALU e intercambian datos con el de datos y los registros visibles al usuario.</p><p><br></p>
+            <h4> <i> Registros de estado</i> </h4>
+            <p class="text">El registro de estado, también conocido como registro de bandera, palabra de estado del programa y registro de código de condición, se define como un conjunto de bits de bandera dentro de un procesador. </p><p><br></p>
+            <p class="text">Un registro es un circuito procesador y es muy parecido a una ubicación de memoria, lo que significa que los datos podrían escribirse y leerse. A diferencia de una ubicación de memoria, el registro de estado a menudo no tiene una dirección porque el microprocesador la usa internamente. En una unidad central de procesamiento (CPU) de 8 bits, se puede establecer un bit de registro de estado, igual al número 1, o borrar , igual al número 0, mediante una variedad de resultados de operación del procesador. El procesador a veces establece o borra los bits, pero otras veces, una instrucción de programa particular establece o borra los bits.</p><p><br></p>
+            <p class="text">Los bits de registro de estado también se denominan banderas o bits de bandera, y el programador los utiliza para ciertos fines de programación. Cada bandera en un registro de estado tiene un propósito único. <br> El indicador de acarreo se establece si una operación anterior hizo que el séptimo bit - o indicador negativo - se desbordara, o hiciera que el indicador de transporte se desbordara. Se establece durante los cambios de lógica, comparación y aritmética. El indicador de cero se establece si el resultado de la operación más reciente fue 0.</p><p><br></p>
+            <p class="text">Un indicador llamado "deshabilitar interrupción" funciona permitiendo o deshabilitando la operación de interrupciones, que son instrucciones que detienen temporalmente ciertas operaciones para que se puedan realizar otras operaciones. Cuando se establece este indicador en particular, no se permite que funcionen las interrupciones, pero cuando está claro, se permiten las interrupciones. Otra bandera llamada bandera decimal permite al procesador seguir un modo binario más avanzado para realizar ecuaciones aritméticas impecables. Cuando se establece la bandera, utiliza este modo binario avanzado. Otro bit de registro es el bit de interrupción, que se establece cuando se ejecuta el comando Force Interrupt (BRK). </p><p><br></p>
+            
+            <h2 id="2.3">2.3 El Ciclón de Instrucciones</h2> <hr>
+            <h4> <i> Ciclos de computadora </i> </h4>
+            <p class="text">La búsqueda es el proceso de obtener instrucciones de un programa o un elemento de datos de la memoria. El término decodificar se refiere al proceso de traducir las instrucciones a señales que la computadora puede ejecutar. <br> Ejecutar es el proceso de llevar a cabo los comandos. Almacenamiento en este contexto significa escribir el resultado a la memoria. <br> </p><p><br></p>
+            <p class="text">En algunas computadoras, el procesador busca, decodifica, ejecuta y almacena solo una instrucción a la vez. En estas computadoras el procesador espera hasta que una instrucción completa las cuatro etapas del ciclo antes de iniciar a trabajar con la siguiente instrucción.</p><p><br></p>
+            <p class="text">Hoy día la mayoría de las computadoras personales soportan un concepto llamado pipelining: <br> Con pipelining los procesadores inician la búsqueda de una segunda instrucción antes de que se haya completado el ciclo de la computadora de la primera instrucción. Los procesadores que cuentan con pipelining habilitado son más rápidos en el procesamiento porque no tienen que esperar para que una instrucción complete el ciclo de computadora antes de buscar la siguiente. </p><p><br></p>
+            
+            <h1 id="2.3.1">2.3.1 Ciclo Fetch-Decode-Execute</h1>
+            <p class="text">El encargado de ejecutar un programa en una computadora u otro sistema computacional es el CPU, lo realiza siguiendo el llamado ciclo Fetch Decode Execute, con este ciclo se ejecutan todas las tareas que una computadora puede realizar.<br> Este ciclo tiene algunas variantes y conforme ha avanzado el tiempo y la tecnología ha sufrido algunos cambios, pero el ciclo básico se conforma de las siguientes etapas:</p><p><br></p>
+            <p class="text"><ul class="indt"> <li>Traer la instrucción: Se obtiene la instrucción desde memoria y se almacena en el registro del CPU para instrucciones.</li><li>Decodificar la instrucción: Se identifica el modo de direccionamiento de la instrucción y la ubicación de los datos a tratar, ya sea de </li> <li> memoria, registro o instrucción directamente.</li> <li>Carga de Parámetros: Se ejecuta la lectura, cargando todos los datos identificados en el paso anterior.</li><li>Ejecutar: Se ejecuta la instrucción ya configurada, realiza la tarea indicada, ya sea una suma, resta, almacenar información, extraer </li> <li>información etc.</li> <li>Almacenar: Se almacena el resultado obtenido de ejecutar la instrucción, por ejemplo, el resultado de una suma o un índice (Número)</li><li>como resultado de éxito de almacenar u obtener información de un archivo, entre otros.</li><li>Actualizar PC: Esta etapa es la de actualizar el registro PC (Program Counter) que contiene la siguiente dirección a ejecutar.</li></ul> <p><br></p>
+            <p class="text"> Evidentemente al ser un ciclo estas etapas se repiten constantemente durante el funcionamiento de la computadora.  </p><p><br></p>
+            <p class="text">Se debe considerar que el ciclo expuesto anteriormente es muy básico. Como se mencionaba hoy en día estos ciclos han tenido algunas alteraciones y optimizado de gran manera, como se sabe los sistemas de hoy en día son multitareas, lo cual conlleva a una alteración en este ciclo, además de las diferentes técnicas para reducir el tiempo de ejecución de instrucciones con temas de concurrencia y paralelismo en los procesadores modernos.</p><p><br></p>
+            <p class="text">El ciclo expuesto nos muestra un poco la forma en la que las computadoras funcionan, todo el proceso que conlleva ejecutar una instrucción que puede parecer muy simple, además este ciclo básico permite darse una idea de cómo ha evolucionado los procesadores y las técnicas para reducir el tiempo de ejecución dado que los sistemas actuales ejecutan de forma simultánea muchas veces este ciclo, siendo este modificado y más eficiente.</p><p><br></p>
+            
+            <h1 id="2.3.2">2.3.2 Segmentación de Instrucciones</h1>
+            <p class="text">La segmentación (en inglés pipelining, literalmente 'tubería' o 'cañería', o data pipeline)​ es un método por el cual se consigue aumentar el rendimiento de algunos sistemas electrónicos digitales. Se usa principalmente en los microprocesadores.</p><p><br></p>
+            <p class="text">El nombre, por analogía, viene de que para impulsar el gas en un oleoducto a la máxima velocidad posible es necesario dividir el oleoducto en tramos y colocar una bomba que dé un nuevo impulso al gas. </p><p><br></p>
+            <p class="text">El símil con la programación existe en que los cálculos deben ser registrados o sincronizados con el reloj cada cierto tiempo para que la ruta crítica (tramo con más carga o retardo computacional entre dos registros de reloj) se reduzca. <br> </p><p><br></p>
+            <p class="text">La ruta crítica es en realidad la frecuencia máxima de trabajo alcanzada por el conjunto. A mayor ruta crítica (tiempo o retraso entre registros) menor es la frecuencia máxima de trabajo y a menor ruta crítica mayor frecuencia de trabajo. La una es la inversa de la otra. Repartir o segmentar equitativamente el cálculo hace que esa frecuencia sea la óptima a costa de más área para el almacenamiento o registro de los datos intervinientes y de un retraso o latencia (en ciclos de reloj/tiempo) en la salida del resultado equivalente al número de segmentaciones o registros realizados.</p><p><br></p>
+            <p class="text">La ventaja primordial de este sistema es que, tal y como se muestra en la imagen, una vez el canal (pipe) está lleno, es decir, después de una latencia de cuatro en la imagen, los resultados de cada comando vienen uno tras otro cada flanco de reloj y sin latencia extra por estar encadenados dentro del mismo canal. Todo esto habiendo maximizado la frecuencia máxima de trabajo. </p><p><br></p>
+            
+            <h1 id="2.3.3">2.3.3 Conjunto de Instrucciones</h1>
+            <p class="text">Un conjunto de instrucciones o repertorio de instrucciones, juego de instrucciones o ISA (del inglés Instruction Set Architecture, Arquitectura del Conjunto de Instrucciones) es una especificación que detalla las instrucciones que una CPU de un ordenador puede entender y ejecutar, o el conjunto de todos los comandos implementados por un diseño particular de una CPU. </p><p><br></p>
+            <p align="center"><img src="https://images.slideplayer.es/33/10484663/slides/slide_5.jpg"> <br></p>
+            <p class="text">El término describe los aspectos del procesador generalmente visibles a un programador, incluyendo los tipos de datos nativos, las instrucciones, los registros, la arquitectura de memoria y las interrupciones, entre otros aspectos.</p><p><br></p>
+            <p class="text">Existe principalmente de 3 tipos: CISC (Complex Instruction Set Computer), RISC (Reduced Instruction Set Computer) y SISC (Specific Instruction Set Computer).</p><p><br></p>
+            <p class="text">La arquitectura del conjunto de instrucciones (ISA) se emplea a veces para distinguir este conjunto de características de la microarquitectura, que son los elementos y técnicas que se emplean para implementar el conjunto de instrucciones. Entre estos elementos se encuentras las microinstrucciones y los sistemas de caché. <br> Procesadores con diferentes diseños internos pueden compartir un conjunto de instrucciones; por ejemplo el Intel Pentium y AMD Athlon implementan versiones casi idénticas del conjunto de instrucciones x86, aunque tienen diseños internos completamente opuestos.</p><p><br></p>
+
+            <h2 id="2.4">2.4 Modos de Direccionamiento</h2> <hr>
+            <p class="text">En informática, los modos de direccionamiento son las diferentes maneras de especificar un operando dentro de una instrucción en lenguaje ensamblador.</p><p><br></p>
+            <p class="text">Un modo de direccionamiento especifica la forma de calcular la dirección de memoria efectiva de un operando mediante el uso de la información contenida en registros y/o constantes, contenida dentro de una instrucción de la máquina o en otra parte.</p><p><br></p>
+            <p class="text">No existe una forma generalmente aceptada de nombrar a los distintos modos de direccionamiento. En particular, los distintos autores y fabricantes de equipos pueden dar nombres diferentes para el modo de hacer frente al mismo, o los mismos nombres, a los diferentes modos de direccionamiento.</p><p><br></p>
+            <p class="text">Además, un modo de direccionamiento que en una determinada arquitectura se trata como un modo de direccionamiento, puede representar la funcionalidad que en otra arquitectura está cubierto por dos o más modos de direccionamiento. </p><p><br></p>
+        </article>
+    </section>
+
+    <footer>
+        <div class="container">
+          <div class="redes-sociales">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f fb"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram insta"></i></a>
+            <a href="#" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ENa6Y-fAZ2h22Gw6I8YkaVW5jG70Bwf2_VidMNl6ZA&s" alt="Logo sitio web"></a>
+          </div>
+          <div class="lenguajes-programacion">
+            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5">
+            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3">
+          </div>
+          <div class="autor">
+            <p>Desarrollado por:</p>
+            <p>Josue Francisco Garcia Cepeda</p>
+            <p>Numero de Control: 21051424</p>
+            <p>Materia: Arquitectura de Computado</p>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>
